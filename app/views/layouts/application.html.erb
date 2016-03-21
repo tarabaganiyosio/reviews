@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reviews</title>
+  <title>Baloon</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="wrap">
 <%= render 'layouts/header' %>
 <div class="container main">
     <% flash.each do |message_type, message| %>
@@ -15,6 +15,9 @@
     <% end %>
    <%= yield %>
 </div>
+</div>
+
+<%= render 'layouts/footer' %>
 
 </body>
 </html>

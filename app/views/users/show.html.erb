@@ -1,19 +1,35 @@
 
-<div class="row"></div>
-    <div class="col-sm-3 side-menu"><p>プロフィール：<%= @user.profile %></p></div>
-    <div class="col-sm-8 profile-body">
-    <div class="profile-img"><%= gravatar_for @user %></div><h1><%= @user.name %></h1><%= render 'follow_form' if logged_in? %>
+<div class="row gutter-20">
+    <div class="col-sm-3 side-menu"><div class="profile-img"><%= link_to gravatar_for(@user,size:260),@user, class:'profile-image' %></div><h1><%= @user.name %></h1><%= render 'follow_form' if logged_in? %></div>
+    <div class="col-sm-9 profile-body">
+               
                 
-                
-                
-                
-                
+                <h2>プロフィール</h2>
+                <%= @user.profile %>
+                <p></p>
+                <h2>Baloon</h2>
+                <p></p>
                 <h2>好きな作品</h2>
-                
+                <p>ウルフオブウォールストリート</p>
                 <h2>好きなカテゴリ</h2>
-                
-                <h2>フォロー</h2>
-                
+                <p>・アクション・SF・ホラーサスペンス</p>
+                <h2>フォローしている人</h2>
+                <p>
+                 <% if @user.following_users.any? %>
+                 <% @user.following_users.each do |user| %>
+                 <%= link_to gravatar_for(user,size:50), user %>
+                 <%= user.name %>
+                 <% end %>
+                <% end %>
+                </p>
                 <h2>フォロワー</h2>
+                <p>
+                <% if @user.follower_users.any? %>
+                 <% @user.follower_users.each do |user| %>
+                 <%= link_to gravatar_for(user,size:50),user %>
+                 <%= user.name %>
+                 <% end %>
+                <% end %>
+                </p>
     </div>
-            
+</div>          

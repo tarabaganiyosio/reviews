@@ -21,7 +21,7 @@
 }
 
 #gloval-head{
-    background:#dc143c;
+    background:#69d3d0;
 }
 
 .navbar-right{
@@ -34,7 +34,11 @@
 
 .navbar-right > li > a:hover {
   color: #fff;
-  background:#dc143c;
+  background:#1dd1cb;
+}
+
+.dropdown{
+  background:#1dd1cb;
 }
 
 .navbar .navbar-toggle .icon-bar {
@@ -46,11 +50,11 @@ background-color: #ffffff;
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   padding-top: 9px;
   padding-left: 9px;
   font-weight: bold;
+  font-family: sans-serif;
 }
 
 #logo:hover {

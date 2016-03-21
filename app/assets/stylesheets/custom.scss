@@ -31,13 +31,106 @@ input {
 
 /* universal */
 
+html{
+  height: 100%;
+}
+
 body {
   padding-top: 60px;
   background:#f5f5f5;
+  height: 100%;
 }
 
 header {
-  background:#dc143c;
+  background:#69d3d0;
+}
+
+.prologue-area{
+  margin-bottom:30px;
+}
+
+.prologue-area > .row > .col-sm-7{
+  padding:20px;
+}
+
+.prologue-area > .row > .col-sm-7 > h1 {
+  font-size: 30px;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+
+#top-image{
+  background:#3b4244;
+  padding:20px;
+  height:300px;
+  margin-bottom:20px;
+  color:#fff;
+}
+
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+.balloon-area{
+  
+}
+
+.balloon-area h2{
+ font-size:20px;
+ 
+  background:#3b4244;
+  color:#fff;
+  padding:10px 0 10px 0;
+}
+
+.balloon-area > .row > .col-sm-12 {
+ font-size:23px;
+  background:#fff;
+  color:#5a6568;
+    margin-bottom:10px;
+    padding:10px;
+}
+
+.balloon-area > .row {
+  margin-bottom:20px;
+  color:#96acad;
+  font-size:10px;
+}
+
+
+.content-search{
+  margin:20px;
+}
+
+.content-search h2{
+  background:#3b4244;
+  color:#fff;
+  padding:10px 0 10px 0;
+}
+
+.content-search p{
+  font-size:16px;
+  line-height:1.8em;
+  letter-spacing:0.2em;
+}
+
+
+
+/* ここでフッターの高さを指定 */
+footer {
+  height: 60px;
+  background-color:#69d3d0;
+  width:100%;
+  padding:20px 0 20px 0;
+  margin-top:0px;
+  color:#fff;
+  text-align:center;
 }
 
 section {
@@ -62,12 +155,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
 
 h2 {
   font-size: 1.2em;
@@ -75,7 +162,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: #000;
 }
 
 p {
@@ -86,10 +173,6 @@ p {
 /* header */
 
 
-
-#header{
-  background: #dc143c;
-}
 
 #error_explanation {
   color: red;
@@ -113,9 +196,8 @@ p {
 }
 
 .profile-body{
-  padding-left:20px;
+  padding:20px;
   background:#fff;
-  margin-left:20px;
 }
 
 .profile-body h1{
@@ -129,27 +211,32 @@ p {
 }
 
 .profile-body h2{
-  font-size:20px;
+  font-size:16px;
+  letter-spacing:0.2em;
+  background:#eafffa;
+  color:#262821;
   clear:both;
   font-weight:bold;
-  padding:0;
+  padding:5px;
   margin-top:20px;
   margin-bottom:20px;
   text-align:left;
 }
 
 .profile-body p{
-  margin-bottom:50px;
+  margin-bottom:18px;
   margin-left:10px;
-  border-bottom:1px #000 solid;
-  padding-bottom:30px;
+  padding-bottom:18px;
 }
 
 .side-menu{
-  border:1px solid #000;
   padding:10px;
   margin-bottom:20px;
   background:#fff;
+}
+
+.side-menu h1{
+  font-size:25px;
 }
 
 .account-form{
@@ -158,9 +245,13 @@ p {
 
 .btn-primary{
   background:#dc143c;
-  padding:10px;
   font-size:16px;
   border-color:#dc143c;
+}
+
+.btn{
+  font-size:16px;
+  padding:5px 10px 5px 10px;
 }
 
 .account-form .btn-primary{
@@ -178,6 +269,12 @@ p {
 }
 
 #follow_form{
-  width:300px;
+  width:260px;
+  font-size:20px;
   left:0;
+}
+
+.profile-image{
+  border-radius: 100%;
+  border:1px solid #000;
 }
