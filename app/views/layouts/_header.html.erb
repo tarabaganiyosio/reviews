@@ -14,7 +14,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><%= link_to "ホーム", '/' %></li>
                 <li><%= link_to "アニメ・映画の作品を探す", '/' %></li>
-                <li><%= link_to "評論する", '/' %></li>
+                <li><%= link_to "作品を登録する", '/' %></li>
+                <li><%= link_to "評論する", newreview_url %></li>
                 <% if logged_in? %>
                 <% else %>
                 <li><%= link_to "アカウントを作成", 'signup' %></li>

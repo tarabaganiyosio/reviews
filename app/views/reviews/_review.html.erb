@@ -1,0 +1,11 @@
+<div class="balloon-box">
+<div class="row">
+    <div class="col-sm-4 balloon-image"><%= link_to image_tag('socialnetwork.png', :size => '70x100'), review %></div>
+    <div class="col-sm-7 balloon-title">
+        <%= link_to review.title, review %></br>
+        <%= link_to "削除", review, method: :delete, data: { confirm: '削除してもよろしいですか？'} %>
+    </div>
+    <div class="col-sm-1">Good Bad</div>
+
+</div>
+</div>

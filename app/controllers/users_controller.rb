@@ -4,6 +4,7 @@ before_action :correct_user,   only: [:edit, :update]
 
   def show
     @user = User.find(params[:id])
+    @reviews = @user.reviews.order(created_at: :desc)
   end
   
   def new

@@ -1,0 +1,17 @@
+<%= form_for(@review) do |f| %>
+    
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title %>
+    <%= f.label :content, "評論" %>
+    <%= f.text_area :content %>
+    
+    <%= f.label :story, "あらすじ" %>
+    <%= f.text_area :story %>
+    
+    <p>この評論はネタバレしますか？</p>
+    
+    <p>この作品のイメージ</p>
+    
+    
+    <%= f.submit "POST", class: "btn btn-primary" %>
+<% end %>
