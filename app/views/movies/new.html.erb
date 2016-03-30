@@ -1,0 +1,10 @@
+<%= form_for(@movie) do |f| %>
+
+    <%= f.label :title, "作品タイトル" %>
+    <%= f.text_field :title %>
+    <%= f.label :story, "あらすじ" %>
+    <%= f.text_field :story %>
+    <%= f.submit "POST", class:"btn btn-primary" %>
+    
+<% end %>
+     
