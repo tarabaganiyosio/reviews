@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#home'
   get 'signup', to: 'users#new'
   get 'newreview', to: 'reviews#new'
+  get 'newmovie', to: 'movies#new'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
       get :following,:followers
     end
   end
+  
+  resources :movies
   
   resources :reviews
   
