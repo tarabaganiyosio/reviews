@@ -1,10 +1,31 @@
+<div class="row">
 <%= form_for(@movie) do |f| %>
-
+    
+    <div class="col-sm-9">
     <%= f.label :title, "作品タイトル" %>
     <%= f.text_field :title %>
     <%= f.label :story, "あらすじ" %>
     <%= f.text_field :story %>
-    <%= f.submit "POST", class:"btn btn-primary" %>
+    
+    <%= f.submit "作品を登録する", class:"btn btn-primary" %>
+    </div>
+    
+    <div class="col-sm-3">
+        <div class="movie-form-image">
+            作品画像をアップロード
+            
+        </div>
+        ◆作品タイトル</br>
+        この作品の正しいタイトルを入力してください。</br>
+        </br>
+        ◆あらすじ</br>
+        この作品のあらすじを300文字以内で書いてください。</br>
+        </br>
+        ◆この作品のイメージ</br>
+        この作品をイメージを感情ボタンの中から選んでください。</br>
+        
+    </div>
     
 <% end %>
+</div>
      

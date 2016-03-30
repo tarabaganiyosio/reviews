@@ -5,7 +5,7 @@
       <h1><%= @user.name %></h1></br>
       
        <%= @user.profile %>
-               
+        <%= render 'follow_form' if logged_in? %>
                 
                 
                

@@ -5,6 +5,10 @@ class MoviesController < ApplicationController
         @movie = Movie.new
     end
     
+    def show
+        @movie = Movie.find(params[:id])
+    end
+    
     def create
         @movie = current_user.movies.build(movies_params)
         if @movie.save

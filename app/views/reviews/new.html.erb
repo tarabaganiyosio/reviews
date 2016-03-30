@@ -1,5 +1,7 @@
+<div class="row">
 <%= form_for(@review) do |f| %>
     
+    <div class="col-sm-9">
     <%= f.label :title, "タイトル" %>
     <%= f.text_field :title %>
     <%= f.label :content, "評論" %>
@@ -8,10 +10,15 @@
     <%= f.label :story, "あらすじ" %>
     <%= f.text_area :story %>
     
+    <%= f.submit "レビューを公開する", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+    
+    <div class="col-sm-3">
     <p>この評論はネタバレしますか？</p>
     
     <p>この作品のイメージ</p>
+    </div>
     
     
-    <%= f.submit "POST", class: "btn btn-primary" %>
-<% end %>
+</div>

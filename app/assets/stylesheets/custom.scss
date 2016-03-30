@@ -159,7 +159,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 1.2em;
-  letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
@@ -295,4 +294,69 @@ p {
 .profile-image{
   border-radius: 100%;
   border:1px solid #000;
+}
+
+.new-movie{
+  
+}
+
+.new-movie p{
+  font-size:18px;
+}
+
+.new-movie-image{
+  width:250px;
+  height:350px;
+  border:1px solid #000;
+  background:#ccc;
+}
+
+.movie-form-image{
+  padding:30px;
+  border:20px solid #ccc;
+  margin-bottom:20px;
+}
+
+
+
+/* 作品ページ */
+
+.movie-body{
+  background:#fff;
+}
+
+.movie-image{
+  border:#fff solid 20px;
+  height:350px;
+  padding:0;
+  background:#ccc;
+}
+
+.movie-body h1{
+  font-size:30px;
+  font-weight:bold;
+  padding:0;
+  letter-spacing:0.2em;
+  margin-top:20px;
+  margin-bottom:20px;
+  text-align:left;
+}
+
+.movie-body h2{
+  font-size:18px;
+  letter-spacing:0.2em;
+  background:#eafffa;
+  color:#262821;
+  clear:both;
+  font-weight:bold;
+  padding:10px;
+  margin-top:20px;
+  margin-bottom:20px;
+  text-align:left;
+}
+
+.movie-body p{
+  margin-bottom:18px;
+  margin-left:20px;
+  padding-bottom:18px;
 }
