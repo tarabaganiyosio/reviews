@@ -1,20 +1,23 @@
 <div class="row">
-<%= form_for(@movie) do |f| %>
+
     
     <div class="col-sm-9">
-    <%= f.label :title, "作品タイトル" %>
-    <%= f.text_field :title %>
-    <%= f.label :story, "あらすじ" %>
-    <%= f.text_field :story %>
+    <%= form_for @movie, html: { multipart: true } do |form| %>
+    <%= form.label :title, "作品タイトル" %>
+    <%= form.text_field :title %>
+    <%= form.label :story, "あらすじ" %>
+    <%= form.text_field :story %>
     
-    <%= f.submit "作品を登録する", class:"btn btn-primary" %>
+    <%= form.submit "作品を登録する", class:"btn btn-primary" %>
+    
+    <% end %>
     </div>
+
     
     <div class="col-sm-3">
-        <div class="movie-form-image">
-            作品画像をアップロード
-            
-        </div>
+        
+       
+      
         ◆作品タイトル</br>
         この作品の正しいタイトルを入力してください。</br>
         </br>
@@ -26,6 +29,6 @@
         
     </div>
     
-<% end %>
+
 </div>
      

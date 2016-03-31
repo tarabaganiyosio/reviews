@@ -3,4 +3,5 @@ class Movie < ActiveRecord::Base
     validates :user_id, presence:true
     validates :title, presence: true
     validates :story, presence: true, length: { maximum: 500 }
+    
 end
