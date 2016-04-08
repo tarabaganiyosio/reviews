@@ -269,6 +269,7 @@ p {
 .btn{
   font-size:16px;
   padding:5px 10px 5px 10px;
+  text-align:center;
 }
 
 .account-form .btn-primary{
@@ -325,6 +326,8 @@ p {
   background:#fff;
 }
 
+
+
 .movie-image{
   border:#fff solid 20px;
   height:350px;
@@ -345,7 +348,6 @@ p {
 .movie-body h2{
   font-size:18px;
   letter-spacing:0.2em;
-  background:#eafffa;
   color:#262821;
   clear:both;
   font-weight:bold;
@@ -353,10 +355,54 @@ p {
   margin-top:20px;
   margin-bottom:20px;
   text-align:left;
+  border-bottom:solid #eafffa 10px;
+  border-left:solid #eafffa 10px;
+}
+
+h2.movie-title{
+  font-size:33px;
+  padding:15px;
 }
 
 .movie-body p{
   margin-bottom:18px;
   margin-left:20px;
   padding-bottom:18px;
+}
+
+.movie-form {
+  background:#ccc;
+  padding:30px 20px;
+}
+
+
+.movie-form input[type="text"],
+textarea {
+  height:200px;
+	outline: none;
+	border: 1px solid #aaa;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	border:0;
+	padding:10px;
+	font-size:1.3em;
+	font-family:Arial, sans-serif;
+	color:#aaa;
+	border:solid 1px #ccc;
+	margin:0 0 20px;
+}
+.movie-form input[type="text"]:focus,
+textarea:focus {
+	box-shadow: 0 0 7px #1abc9c;
+	border: 1px solid #1abc9c;
+	color:#000;
+}
+
+.movie-form input[type="submit"],
+{
+  width:200px;
+  height:60px;
+  padding:20px;
+  text-align : center ;
+  margin:0 auto;
 }

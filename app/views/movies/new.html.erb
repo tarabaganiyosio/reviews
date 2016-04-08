@@ -1,16 +1,29 @@
-<div class="row">
+<div class="row movie-form">
 
     
     <div class="col-sm-9">
-    <%= form_for @movie, html: { multipart: true } do |form| %>
-    <%= form.label :title, "作品タイトル" %>
-    <%= form.text_field :title %>
-    <%= form.label :story, "あらすじ" %>
-    <%= form.text_field :story %>
+        
+    <%= form_for @movie do |f| %>
+    <%= f.text_field :title, :placeholder => "作品タイトル：例）タイタニック、新世紀エヴァンゲリヲン" %>
+    <%= f.label :story, "あらすじ" %>
+    <%= f.text_area :story, :placeholder => "あらすじ：この作品のあらすじを500文字以内で説明してください" %>
     
-    <%= form.submit "作品を登録する", class:"btn btn-primary" %>
-    
+    <% if @movie.image? %>
+    <%= image_tag @movie.image.url %>
     <% end %>
+    
+    <%= f.label :image, "画像" %></br>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+    
+    <% if @movie.persisted? && @movie.image? %>
+    <label>
+        <%= f.check_box :remove_image %>
+        画像を削除
+    </label>
+    <% end %>
+    
+    
     </div>
 
     
@@ -29,6 +42,11 @@
         
     </div>
     
-
+    <div class="col-sm-12">
+        
+    <%= f.submit "作品を登録する", class:"btn btn-primary" %>
+    
+    <% end %>
+    </div>
 </div>
      

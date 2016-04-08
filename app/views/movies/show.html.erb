@@ -1,23 +1,32 @@
 <div class="row">
     <div class="col-sm-3">
         <div class="movie-image">
-            <h2>この作品の画像</h2>
+            
+            <% if @movie.image? %>
+                <%= image_tag @movie.image.url, :size => '220x310' %>
+            <% end %>
+            
         </div>
-        <p>この作品を見るならこちら</p>
+        <p>
+            <%= link_to "削除", @movie, method: :delete, data: { confirm: '削除してよろしいですか？' } %> 
+            </p>
+            レビューを見る</br>
+            スレッドを見る
+        
     </div>
     <div class="col-sm-9 movie-body">
-    <h2>タイトル</h2>
-    <p><%= @movie.title %></p>
+    <h2 class="movie-title"><%= @movie.title %></h2>
+    <p>泣ける　笑える　スペクタクル</p>
     
-    <h2>レビュワーからの評価</h2>
-    <p>★★★★★</p>
+    <h2>レビュワーからの総合評価</h2>
+    <p>映像：★★★★★　キャスト：★★★★★　音楽：★★★★★　演出：★★★★★　物語：★★★★★</p>
     <h2>あらすじ</h2>
     <p><%= @movie.story %></p>
 
     <h2>この作品のレビューを見る</h2>
     <p>レビュー１</p>
     
-    <h2>この作品のレビューを見る</h2>
+    <h2>この作品のスレッド</h2>
     <p>レビュー１</p>
     
     </div>

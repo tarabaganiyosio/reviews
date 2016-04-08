@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
     before_action :logged_in_user, only: [:create, :destroy]
+    before_action :set_movie, only: [:destroy] 
     
     def new
         @movie = Movie.new
@@ -19,10 +20,19 @@ class MoviesController < ApplicationController
         end
     end
     
+    def destroy
+        @movie.destroy
+        redirect_to root_path, notice: '作品を削除しました'
+    end
+    
     private
     
     def movies_params
-        params.require(:movie).permit(:title, :story)
+        params.require(:movie).permit(:title, :story, :image, :image_cache, :remove_image)
+    end
+    
+    def set_movie
+        @movie = Movie.find(params[:id])
     end
     
 end

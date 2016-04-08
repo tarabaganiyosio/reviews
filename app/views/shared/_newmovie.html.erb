@@ -3,7 +3,10 @@
 <% @new_movies.first(4).each do |newmovie| %>
 <div class="col-sm-3 new-movie">
 <div class="new-movie-image">
-    
+    <% if newmovie.image? %>
+        <%= link_to image_tag(newmovie.image.url,:size => '250x350'), newmovie  %>
+    <% end %>
+
 </div>
 <p><%= link_to newmovie.title, newmovie %></p>
 </div>

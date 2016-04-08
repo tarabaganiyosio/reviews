@@ -4,4 +4,5 @@ class Movie < ActiveRecord::Base
     validates :title, presence: true
     validates :story, presence: true, length: { maximum: 500 }
     
+    mount_uploader :image, ImageUploader
 end
